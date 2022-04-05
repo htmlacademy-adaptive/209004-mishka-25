@@ -1,12 +1,166 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
+    <header class="page__header page-header">
+      <a class="page-header__logo">
+        <img src="/img/mishka-logo-mobile.svg" width="85" height="34" alt="Слово Мишка латиницей">
+      </a>
+      <nav class="menu-main">
+        <ul class="menu-main__list">
+          <li class="menu-main__item">
+            <a href="/catalog/">
+              Каталог товаров
+            </a>
+          </li>
+          <li class="menu-main__item">
+            <a href="/order/">
+              Вязание на заказ
+            </a>
+          </li>
+          <li class="menu-main__item menu-main__item--search">
+            <a href="/search/">
+              Поиск по сайту
+            </a>
+          </li>
+          <li class="menu-main__item menu-main__item--basket">
+            <a href="/basket/">
+              Корзина пока пуста
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="page-header__toogle" type="button">
+        <span class="visually-hidden">Показать меню</span>
+      </button>
+    </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+    <main class="page-main">
+      <h1 class="page-main__topic page-main__topic--image">Милые штуки ручной работы для дома</h1>
 
+      <section class="menu-catalog">
+        <h2><span class="visually-hidden">Разделы каталога</span></h2>
+        <ul class="menu-catalog__list">
+          <li class="menu-catalog__item menu-catalog__item--interior">
+            <a href="/catalog/interior/">Предметы интерьера</a>
+          </li>
+          <li class="menu-catalog__item menu-catalog__item--toys">
+            <a href="/catalog/toys/">Детские игрушки</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="product-week">
+        <h2 class="product-week__title">Вязаные корзинки</h2>
+        <p class="product-week__title-slogan">Товар недели</p>
+        <p class="product-week__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+
+        <dl class="product-week__properties-list">
+          <dt class="product-week__properties-name">Цвет</dt>
+          <dd class="product-week__properties-value">тиффани/серый</dd>
+
+          <dt class="product-week__properties-name">Диаметр</dt>
+          <dd class="product-week__properties-value">25 см</dd>
+
+          <dt class="product-week__properties-name">Высота</dt>
+          <dd class="product-week__properties-value">15 см</dd>
+        </dl>
+
+        <img class="product-week__image" src="/img/triple-set-mobile.jpg" width="260" height="315" alt="вязанные изделия">
+
+        <p class="product-week__price">
+          Цена: 990 руб.
+        </p>
+
+        <button class="button" type="button">Заказать</button>
+      </section>
+
+      <section class="advantages">
+        <h2 class="advantages__title">Коротко о нас</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
+          <li class="advantages__item advantages__item--style">Скандинавский стиль по российской цене</li>
+          <li class="advantages__item advantages__item--like">Увеличивает лайки на фотографиях</li>
+          <li class="advantages__item advantages__item--love">Связано вручную с любовью и умилением</li>
+          <li class="advantages__item advantages__item--support">Поддержка отечественного производителя</li>
+          <li class="advantages__item advantages__item--gift">Поставляется в подарочной упаковке</li>
+        </ul>
+      </section>
+
+      <section class="reviews slider">
+        <h2>Отзывы</h2>
+        <blockquote class="slider__item">
+          <p class="reviews__text">
+            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+          </p>
+          <cite class="reviews__autor-name">
+            Анастасия Красильникова
+          </cite>
+          <span class="reviews__autor-insta">
+            @misssssiskras
+          </span>
+        </blockquote>
+
+        <div class="reviews__toggle">
+          <button class="reviews__toggle reviews__toggle--left slider__toogle slider__toogle--left" type="button">
+            <span class="visually-hidden">Листать влево</span>
+          </button>
+          <button class="reviews__toggle reviews__toggle--right slider__toogle slider__toogle--right" type="button">
+            <span class="visually-hidden">Листать вправо</span>
+          </button>
+        </div>
+
+        <button class="button" type="button">Написать</button>
+      </section>
+
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+
+        <dl class="contacts__list">
+          <dt class="contacts__item-name">e-mail:</dt>
+          <dd class="contacts__item-value"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
+          <dt class="contacts__item-name">адрес:</dt>
+          <dd class="contacts__item-value">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
+        </dl>
+
+        <div class="contacts__map">
+
+        </div>
+
+        <button class="button" type="button">Напишите нам</button>
+      </section>
+    </main>
+
+    <footer class="page__footer">
+      <ul class="social-links">
+        <li class="social-links__item social-links__item--vk">
+          <a href=""></a>
+        </li>
+        <li class="social-links__item social-links__item--youtube">
+          <a href=""></a>
+        </li>
+        <li class="social-links__item social-links__item--telegram">
+          <a href=""></a>
+        </li>
+      </ul>
+
+      <a class="copyrights" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+    </footer>
+
+    <template id="addBasketModal">
+      <form class="form-modal">
+        <fieldset>
+          <legend class="form-modal__title">Добавить в козину</legend>
+          <p class="form-modal__text">Выберите размер:</p>
+          <label class="form-modal__check" for="sizeS">s</label><input type="radio" id="sizeS">
+          <label class="form-modal__check" for="sizeM">m</label><input type="radio" id="sizeM">
+          <label class="form-modal__check" for="sizeL">l</label><input type="radio" id="sizeL">
+          <button class="form-modal__button button" type="button">Добавить</button>
+        </fieldset>
+      </form>
+    </template>
   </body>
 </html>
