@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог - HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="page__header page-header">
+      <a href="/" class="page-header__logo">
+        <img src="/img/mishka-logo-mobile.svg" width="85" height="34" alt="Слово Мишка латиницей">
+      </a>
+      <nav class="menu-main">
+        <ul class="menu-main__list">
+          <li class="menu-main__item">
+            <a href="/catalog/">
+              Каталог товаров
+            </a>
+          </li>
+          <li class="menu-main__item">
+            <a href="/order/">
+              Вязание на заказ
+            </a>
+          </li>
+          <li class="menu-main__item menu-main__item--search">
+            <a href="/search/">
+              Поиск по сайту
+            </a>
+          </li>
+          <li class="menu-main__item menu-main__item--basket">
+            <a href="/basket/">
+              Корзина пока пуста
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="page-header__toogle" type="button">
+        <span class="visually-hidden">Показать меню</span>
+      </button>
+    </header>
+
+    <main class="page-main">
+      <h1 class="page-main__topic">Каталог товаров</h1>
+
+      <section class="product">
+        <img class="product__image" src="/img/product-photo-1-mobile.jpg" width="260" height="315" alt="Зайчик-попрыгайчик">
+        <h2 class="product__title">Зайчик-попрыгайчик</h2>
+        <dl class="product__properties-list">
+          <dt class="product__properties-name">Рост</dt>
+          <dd class="product__properties-value">30 см</dd>
+
+          <dt class="product__properties-name">вес</dt>
+          <dd class="product__properties-value">200 г</dd>
+        </dl>
+        <p class="product__price">
+          Цена: 1 200 руб.
+        </p>
+      </section>
+
+      <section class="product">
+        <img class="product__image" src="/img/product-photo-2-mobile.jpg" width="260" height="315" alt="Корзинка для белья">
+        <h2 class="product__title">Корзинка для белья</h2>
+        <dl class="product__properties-list">
+          <dt class="product__properties-name">Диаметр</dt>
+          <dd class="product__properties-value">15 см</dd>
+
+          <dt class="product__properties-name">высота</dt>
+          <dd class="product__properties-value">10 см</dd>
+        </dl>
+        <p class="product__price">
+          Цена: 690 руб.
+        </p>
+      </section>
+
+      <section class="product">
+        <img class="product__image" src="/img/product-photo-3-mobile.jpg" width="260" height="315" alt="Большая корзинка для игрушек">
+        <h2 class="product__title">Большая корзинка для игрушек</h2>
+        <dl class="product__properties-list">
+          <dt class="product__properties-name">Диаметр</dt>
+          <dd class="product__properties-value">30 см</dd>
+
+          <dt class="product__properties-name">высота</dt>
+          <dd class="product__properties-value">30 см</dd>
+        </dl>
+        <p class="product__price">
+          Цена: 1 500 руб.
+        </p>
+      </section>
+
+      <section class="process">
+        <h2 class="process__title">Процесс производства</h2>
+        <img class="process__image" src="/img/process-video-mobile" width="260" height="150" alt="Вязаная корзина">
+        <p class="process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <button class="button" type="button">Сделать заказ</button>
+      </section>
+    </main>
+
+    <footer class="page__footer">
+      <ul class="social-links">
+        <li class="social-links__item social-links__item--vk">
+          <a href="" aria-label="перейти в ВКонтакте">
+            <img src="/img/vk-icon.svg" alt="иконка ВКонтакте" width="27" height="17">
+          </a>
+        </li>
+        <li class="social-links__item social-links__item--youtube">
+          <a href="" aria-label="перейти в YouTube">
+            <img src="/img/youtube-icon.svg" alt="иконка youtube" width="24" height="18">
+          </a>
+        </li>
+        <li class="social-links__item social-links__item--telegram">
+          <a href="" aria-label="перейти в Telegram">
+            <img src="/img/telegram-icon.svg" alt="иконка Telegram" width="20" height="17">
+          </a>
+        </li>
+      </ul>
+
+      <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+    </footer>
+
+    <template id="addBasketModal">
+      <form class="form-modal">
+        <fieldset>
+          <legend class="form-modal__title">Добавить в козину</legend>
+          <p class="form-modal__description">Выберите размер:</p>
+          <label class="form-modal__check">
+            <input type="radio">s
+          </label>
+          <label class="form-modal__check">
+            <input type="radio">m
+          </label>
+          <label class="form-modal__check">
+            <input type="radio">l
+          </label>
+          <button class="form-modal__button button" type="button">
+            Добавить
+          </button>
+        </fieldset>
+      </form>
+    </template>
+  </body>
+</html>

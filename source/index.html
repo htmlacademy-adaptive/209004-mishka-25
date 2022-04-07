@@ -42,7 +42,7 @@
       <h1 class="page-main__topic page-main__topic--image">Милые штуки ручной работы для дома</h1>
 
       <section class="menu-catalog">
-        <h2><span class="visually-hidden">Разделы каталога</span></h2>
+        <h2 class="visually-hidden">Разделы каталога</h2>
         <ul class="menu-catalog__list">
           <li class="menu-catalog__item menu-catalog__item--interior">
             <a href="/catalog/interior/">Предметы интерьера</a>
@@ -90,9 +90,9 @@
         </ul>
       </section>
 
-      <section class="reviews slider">
+      <section class="reviews">
         <h2>Отзывы</h2>
-        <blockquote class="slider__item">
+        <blockquote class="reviews__item">
           <p class="reviews__text">
             Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
           </p>
@@ -105,10 +105,10 @@
         </blockquote>
 
         <div class="reviews__toggle">
-          <button class="reviews__toggle reviews__toggle--left slider__toogle slider__toogle--left" type="button">
+          <button class="reviews__toggle reviews__toggle--left" type="button">
             <span class="visually-hidden">Листать влево</span>
           </button>
-          <button class="reviews__toggle reviews__toggle--right slider__toogle slider__toogle--right" type="button">
+          <button class="reviews__toggle reviews__toggle--right" type="button">
             <span class="visually-hidden">Листать вправо</span>
           </button>
         </div>
@@ -137,17 +137,23 @@
     <footer class="page__footer">
       <ul class="social-links">
         <li class="social-links__item social-links__item--vk">
-          <a href=""></a>
+          <a href="" aria-label="перейти в ВКонтакте">
+            <img src="/img/vk-icon.svg" alt="иконка ВКонтакте" width="27" height="17">
+          </a>
         </li>
         <li class="social-links__item social-links__item--youtube">
-          <a href=""></a>
+          <a href="" aria-label="перейти в YouTube">
+            <img src="/img/youtube-icon.svg" alt="иконка youtube" width="24" height="18">
+          </a>
         </li>
         <li class="social-links__item social-links__item--telegram">
-          <a href=""></a>
+          <a href="" aria-label="перейти в Telegram">
+            <img src="/img/telegram-icon.svg" alt="иконка Telegram" width="20" height="17">
+          </a>
         </li>
       </ul>
 
-      <a class="copyrights" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+      <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
     </footer>
 
     <template id="addBasketModal">
@@ -155,10 +161,18 @@
         <fieldset>
           <legend class="form-modal__title">Добавить в козину</legend>
           <p class="form-modal__text">Выберите размер:</p>
-          <label class="form-modal__check" for="sizeS">s</label><input type="radio" id="sizeS">
-          <label class="form-modal__check" for="sizeM">m</label><input type="radio" id="sizeM">
-          <label class="form-modal__check" for="sizeL">l</label><input type="radio" id="sizeL">
-          <button class="form-modal__button button" type="button">Добавить</button>
+          <label class="form-modal__check">
+            <input type="radio">s
+          </label>
+          <label class="form-modal__check">
+            <input type="radio">m
+          </label>
+          <label class="form-modal__check">
+            <input type="radio">l
+          </label>
+          <button class="form-modal__button button" type="button">
+            Добавить
+          </button>
         </fieldset>
       </form>
     </template>
