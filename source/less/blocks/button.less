@@ -1,0 +1,26 @@
+.button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: @content;
+  text-align: center;
+  padding: 16px 70px;
+  box-sizing: border-box;
+  background-color: @bg-button;
+  border: 2px solid @content;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @content;
+    color: @basic-white;
+  }
+
+  &:active {
+    background-color: @content;
+    color: rgba(@basic-white, 0.3);
+  }
+}
+
+.button--accent {
+  background-color: @accent;
+}
