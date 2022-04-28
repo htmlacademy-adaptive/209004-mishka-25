@@ -2,6 +2,12 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    background-color: @bg-section;
+    display: flex;
+    padding: 0 50px;
+  }
 }
 
 .menu-catalog__item--interior {
@@ -23,4 +29,8 @@
 .menu-catalog__item {
   padding: 24px 30px;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
 }

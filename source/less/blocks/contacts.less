@@ -1,5 +1,14 @@
 .contacts {
   padding: 38px 30px 40px;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-areas:
+      "title map"
+      "address map"
+      "button map";
+  }
+  grid-template-columns: 1fr 1fr;
 }
 
 .contacts__title {
@@ -7,6 +16,7 @@
   font-size: 25px;
   line-height: 30px;
   color: @title;
+  grid-area: title;
 }
 
 .contacts__list {
@@ -16,6 +26,11 @@
   color: @content;
   padding-top: 28px;
   padding-bottom: 62px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    grid-area: address;
+  }
 }
 
 .contacts__link {
@@ -26,4 +41,11 @@
 
 .contacts__map {
   padding-bottom: 40px;
+  grid-area: map;
+}
+
+.contacts__button {
+  @media (min-width: @desktop-width) {
+    grid-area: button;
+  }
 }
