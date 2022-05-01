@@ -1,13 +1,19 @@
 .menu-main {
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
+}
+
+.menu-main--wrapper {
   width: 100%;
   position: absolute;
-  background-color: #ffffff;
   top: 80px;
   left: 0;
 
   @media (min-width: @tablet-width) {
     top: 0;
-    background: none;
   }
 }
 
@@ -78,16 +84,6 @@
 }
 
 .menu-main__item--search {
-  &::before {
-    content: "";
-    width: 18px;
-    height: 18px;
-    background-image: url("/img/search-icon.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 30px;
-  }
-
   @media (min-width: @tablet-width) {
     grid-area: search;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -96,20 +92,40 @@
     height: 100%;
     display: flex;
     align-items: center;
-
-    &::before {
-      width: 100%;
-      background-position: center;
-      left: unset;
-    }
   }
 
   @media (min-width: @desktop-width) {
     justify-self: center;
   }
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url("/img/search-icon.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30px;
+
+    @media (min-width: @tablet-width) {
+      width: 100%;
+      background-position: center;
+      left: unset;
+    }
+  }
 }
 
 .menu-main__item--basket {
+  @media (min-width: @tablet-width) {
+    grid-area: basket;
+    justify-self: end;
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-self: center;
+  }
+
   &::before {
     content: "";
     width: 21px;
@@ -118,27 +134,24 @@
     background-repeat: no-repeat;
     position: absolute;
     left: 30px;
-  }
 
-  @media (min-width: @tablet-width) {
-    grid-area: basket;
-    justify-self: end;
-    display: flex;
-
-    &::before {
+    @media (min-width: @tablet-width) {
       position: unset;
       margin-right: 32px;
       align-self: center;
     }
   }
-
-  @media (min-width: @desktop-width) {
-    justify-self: center;
-  }
 }
 
 .menu-main__item--delivery {
   display: none;
+
+  & .menu-main__link {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: normal;
+  }
 
   @media (min-width: @tablet-width) {
     grid-area: delivery;
@@ -151,13 +164,6 @@
   }
 }
 
-.menu-main__link--delivery {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: normal;
-}
-
 .menu-main__link-label {
   @media (min-width: @tablet-width) {
     display: none;
@@ -166,6 +172,10 @@
 
 .menu-main__item--new {
   display: none;
+
+  & .menu-main__link {
+    font-size: 15px;
+  }
 
   @media (min-width: @desktop-width) {
     display: block;
@@ -177,16 +187,12 @@
 .menu-main__item--sale {
   display: none;
 
+  &.menu-main__link--sale {
+    font-size: 15px;
+  }
+
   @media (min-width: @desktop-width) {
     display: block;
     grid-area: sale;
   }
-}
-
-.menu-main__link--new {
-  font-size: 15px;
-}
-
-.menu-main__link--sale {
-  font-size: 15px;
 }

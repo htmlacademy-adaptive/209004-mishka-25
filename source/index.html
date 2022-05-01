@@ -9,7 +9,7 @@
   <body class="page__body">
     <header class="page__header page-header">
       <a class="page-header__logo" aria-label="Логотип Мишка"></a>
-      <nav class="menu-main visually-hiddens">
+      <nav class="menu-main menu-main--wrapper visually-hiddens">
         <ul class="menu-main__list">
           <li class="menu-main__item menu-main__item--catalog">
             <a class="menu-main__link" href="catalog.html">
@@ -32,17 +32,17 @@
             </a>
           </li>
           <li class="menu-main__item menu-main__item--delivery">
-            <a class="menu-main__link menu-main__link--delivery" href="/delivery/">
+            <a class="menu-main__link" href="/delivery/">
               Бесплатная доставка по России
             </a>
           </li>
           <li class="menu-main__item menu-main__item--new">
-            <a class="menu-main__link menu-main__link--new" href="/new/">
+            <a class="menu-main__link" href="/new/">
               Новые поступления
             </a>
           </li>
           <li class="menu-main__item menu-main__item--sale">
-            <a class="menu-main__link menu-main__link--sale" href="/sale/">
+            <a class="menu-main__link" href="/sale/">
               Распродажа
             </a>
           </li>
@@ -90,7 +90,7 @@
           Цена: 990 руб.
         </p>
 
-        <button class="button button__default product-week__button" type="button">Заказать</button>
+        <button class="button product-week__button" type="button">Заказать</button>
       </section>
 
       <section class="advantages">
@@ -128,7 +128,7 @@
           </button>
         </div>
 
-        <button class="button button__default reviews__button" type="button">Написать</button>
+        <button class="button reviews__button" type="button">Написать</button>
       </section>
 
       <section class="contacts">
@@ -145,12 +145,12 @@
 
         </div>
 
-        <button class="button button__default button__default--center contacts__button" type="button">Напишите нам</button>
+        <button class="button button--center contacts__button" type="button">Напишите нам</button>
       </section>
     </main>
 
     <footer class="page__footer">
-      <a class="logo logo__footer" aria-label="Логотип Мишка"></a>
+      <a class="page__footer-logo" aria-label="Логотип Мишка"></a>
 
       <ul class="social-links">
         <li class="social-links__item social-links__item--vk">
@@ -187,7 +187,7 @@
           <label class="form-modal__check">
             <input type="radio">l
           </label>
-          <button class="form-modal__button button button__default button__default--accent" type="button">
+          <button class="form-modal__button button button--accent" type="button">
             Добавить
           </button>
         </fieldset>
