@@ -2,34 +2,48 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page__header page-header">
-      <a class="page-header__logo">
-        <img src="/img/mishka-logo-mobile.svg" width="85" height="34" alt="Слово Мишка латиницей">
-      </a>
-      <nav class="menu-main visually-hidden">
+      <a class="page-header__logo" aria-label="Логотип Мишка"></a>
+      <nav class="page-header__menu-area menu-main visually-hiddens">
         <ul class="menu-main__list">
-          <li class="menu-main__item">
-            <a href="catalog.html">
+          <li class="menu-main__item menu-main__item--catalog">
+            <a class="menu-main__link" href="catalog.html">
               Каталог товаров
             </a>
           </li>
-          <li class="menu-main__item">
-            <a href="form.html">
+          <li class="menu-main__item menu-main__item--order">
+            <a class="menu-main__link" href="form.html">
               Вязание на заказ
             </a>
           </li>
           <li class="menu-main__item menu-main__item--search">
-            <a href="/search/">
-              Поиск по сайту
+            <a class="menu-main__link" href="/search/">
+              <span class="menu-main__link-label">Поиск по сайту</span>
             </a>
           </li>
           <li class="menu-main__item menu-main__item--basket">
-            <a href="/basket/">
-              Корзина пока пуста
+            <a class="menu-main__link" href="/basket/">
+              Корзина: пока пуста
+            </a>
+          </li>
+          <li class="menu-main__item menu-main__item--delivery">
+            <a class="menu-main__link" href="/delivery/">
+              Бесплатная доставка по России
+            </a>
+          </li>
+          <li class="menu-main__item menu-main__item--new">
+            <a class="menu-main__link" href="/new/">
+              Новые поступления
+            </a>
+          </li>
+          <li class="menu-main__item menu-main__item--sale">
+            <a class="menu-main__link" href="/sale/">
+              Распродажа
             </a>
           </li>
         </ul>
@@ -40,7 +54,7 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page-main__topic page-main__topic--image">Милые штуки ручной работы для дома</h1>
+      <h1 class="page-main__topic page-main__topic--image">Милые штуки ручной <br>работы для дома</h1>
 
       <section class="menu-catalog">
         <h2 class="visually-hidden">Разделы каталога</h2>
@@ -76,7 +90,7 @@
           Цена: 990 руб.
         </p>
 
-        <button class="button" type="button">Заказать</button>
+        <button class="button product-week__button" type="button">Заказать</button>
       </section>
 
       <section class="advantages">
@@ -106,15 +120,15 @@
         </blockquote>
 
         <div class="reviews__toggle">
-          <button class="reviews__toggle reviews__toggle--left" type="button">
+          <button class="reviews__arrow reviews__arrow--left" type="button">
             <span class="visually-hidden">Листать влево</span>
           </button>
-          <button class="reviews__toggle reviews__toggle--right" type="button">
+          <button class="reviews__arrow reviews__arrow--right" type="button">
             <span class="visually-hidden">Листать вправо</span>
           </button>
         </div>
 
-        <button class="button" type="button">Написать</button>
+        <button class="button reviews__button" type="button">Написать</button>
       </section>
 
       <section class="contacts">
@@ -131,11 +145,13 @@
 
         </div>
 
-        <button class="button" type="button">Напишите нам</button>
+        <button class="button button--center contacts__button" type="button">Напишите нам</button>
       </section>
     </main>
 
     <footer class="page__footer">
+      <a class="page__footer-logo" aria-label="Логотип Мишка"></a>
+
       <ul class="social-links">
         <li class="social-links__item social-links__item--vk">
           <a href="" aria-label="перейти в ВКонтакте">
