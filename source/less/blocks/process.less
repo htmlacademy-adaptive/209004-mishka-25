@@ -4,6 +4,10 @@
   padding: 20px 0 33px;
   border: 1px solid @border;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+  }
 }
 
 .process__title {
@@ -14,6 +18,10 @@
   padding: @process__wrapper;
   padding-bottom: 26px;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+  }
 }
 
 .process__description {
@@ -24,4 +32,28 @@
 
 .process__wrapper {
   padding: @process__wrapper;
+}
+
+.process__image-area {
+  @media (min-width: @tablet-width) {
+    grid-row: 1/2;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1/4;
+    margin: 0;
+  }
+}
+
+.process__image {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  object-fit: cover;
+}
+
+.process__button {
+  padding: 16px;
+  line-height: 16px;
 }
