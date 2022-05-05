@@ -2,12 +2,30 @@
   padding: 0 30px 55px;
 }
 
+.form__partition {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+  }
+}
+
 .form__title-partition {
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
   color: @accent;
   padding-top: 30px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1/2;
+    padding: 0;
+  }
 }
 
 .form__label {
@@ -15,9 +33,17 @@
   font-size: 17px;
   line-height: 18px;
   color: @title;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 2/3;
+  }
 }
 
 .form__input {
+  @media (min-width: @tablet-width) {
+    grid-column: 2/3;
+  }
+
   &::placeholder {
     font-size: 17px;
     line-height: 18px;
@@ -33,6 +59,10 @@
 .form__textarea {
   padding: 17px;
 
+  @media (min-width: @tablet-width) {
+    grid-column: 2/3;
+  }
+
   &::placeholder {
     font-size: 17px;
     line-height: 18px;
@@ -46,4 +76,20 @@
   line-height: 16px;
   color: @content;
   padding: 17px 0 30px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.form__partition--footer {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: end;
+  }
 }

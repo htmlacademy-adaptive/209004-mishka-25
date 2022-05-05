@@ -2,34 +2,48 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Форма Заказа - HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page__header page-header">
-      <a href="/" class="page-header__logo">
-        <img src="/img/mishka-logo-mobile.svg" width="85" height="34" alt="Слово Мишка латиницей">
-      </a>
-      <nav class="menu-main">
+      <a class="page-header__logo" href="/" aria-label="Логотип Мишка"></a>
+      <nav class="page-header__menu-area menu-main visually-hiddens">
         <ul class="menu-main__list">
-          <li class="menu-main__item">
-            <a href="catalog.html">
+          <li class="menu-main__item menu-main__item--catalog">
+            <a class="menu-main__link" href="catalog.html">
               Каталог товаров
             </a>
           </li>
-          <li class="menu-main__item">
-            <a>
+          <li class="menu-main__item menu-main__item--order">
+            <a class="menu-main__link">
               Вязание на заказ
             </a>
           </li>
           <li class="menu-main__item menu-main__item--search">
-            <a href="/search/">
-              Поиск по сайту
+            <a class="menu-main__link" href="/search/">
+              <span class="menu-main__link-label">Поиск по сайту</span>
             </a>
           </li>
           <li class="menu-main__item menu-main__item--basket">
-            <a href="/basket/">
-              Корзина пока пуста
+            <a class="menu-main__link" href="/basket/">
+              Корзина: пока пуста
+            </a>
+          </li>
+          <li class="menu-main__item menu-main__item--delivery">
+            <a class="menu-main__link" href="/delivery/">
+              Бесплатная доставка по России
+            </a>
+          </li>
+          <li class="menu-main__item menu-main__item--new">
+            <a class="menu-main__link" href="/new/">
+              Новые поступления
+            </a>
+          </li>
+          <li class="menu-main__item menu-main__item--sale">
+            <a class="menu-main__link" href="/sale/">
+              Распродажа
             </a>
           </li>
         </ul>
@@ -45,7 +59,7 @@
       <section>
         <h2 class="visually-hidden">Форма заказа</h2>
         <form class="form" method="POST" action="https://echo.htmlacademy.ru">
-          <fieldset>
+          <fieldset class="form__partition">
             <legend class="form__title-partition">Тип</legend>
             <label class="form__label form__label--radio">
               <input type="radio" name="interior" checked>
@@ -56,7 +70,7 @@
               Детская игрушка
             </label>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__partition">
             <legend class="form__title-partition">Цвет</legend>
             <label class="form__label form__label--checkbox">
               <input type="checkbox" name="white" checked>
@@ -83,7 +97,7 @@
               Оранжевый
             </label>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__partition">
             <legend class="form__title-partition">Фио</legend>
             <label class="form__label" for="fioName">Имя:</label>
               <input class="form__input form__input--required" type="text" id="fioName" name="name" placeholder="Введите ваше имя" required>
@@ -92,25 +106,29 @@
             <label class="form__label" for="fioPatronymic">Отчество:</label>
               <input class="form__input" type="text" id="fioPatronymic" name="patronymic" placeholder="Отчество, если желаете">
           </fieldset>
-          <fieldset>
+          <fieldset class="form__partition">
             <legend class="form__title-partition">Тел</legend>
             <input class="form__input form__input--required form__input--phone" type="tel" name="tel" placeholder="+7 xxx xxx xx xx" required>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__partition">
             <legend class="form__title-partition">E-mail</legend>
             <input class="form__input form__input--required form__input--email" type="email" name="email" placeholder="Ваш Email" required>
           </fieldset>
-          <fieldset>
+          <fieldset class="form__partition">
             <legend class="form__title-partition">Доп</legend>
-            <textarea class="form__comments" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
-          <p class="form__footnote">Поля обязательны для заполнения</p>
-          <button class="button button__default" type="submit">Отправить заказ</button>
+          <fieldset class="form__partition form__partition--footer ">
+            <p class="form__footnote">Поля обязательны для заполнения</p>
+            <button class="button button__default" type="submit">Отправить заказ</button>
+          </fieldset>
         </form>
       </section>
     </main>
 
     <footer class="page__footer">
+      <a class="page__footer-logo" href="/" aria-label="Логотип Мишка"></a>
+
       <ul class="social-links">
         <li class="social-links__item social-links__item--vk">
           <a href="" aria-label="перейти в ВКонтакте">
