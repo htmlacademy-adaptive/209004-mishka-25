@@ -30,7 +30,7 @@
 
 .page__footer {
   background-color: @bg-section;
-  padding: 25px 30px 28px;
+  padding: 30px 30px 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,6 +38,10 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    padding: 50px 50px 58px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -49,10 +53,29 @@
     background-image: url("/img/mishka-logo-footer.svg");
     width: 102px;
     height: 34px;
+
+    &:hover {
+      background-image: url("/img/mishka-logo-footer-hover.svg");
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
-
 .page__section {
   margin-bottom: 30px;
+}
+
+.page__main-margin {
+  @media (min-width: @desktop-width) {
+    margin: 0 @main-margin;
+  }
+}
+
+.page__top-margin {
+  @media (min-width: @desktop-width) {
+    margin-top: 65px;
+  }
 }

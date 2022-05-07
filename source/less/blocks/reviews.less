@@ -3,20 +3,79 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 80px 50px 30px;
+    padding: 80px 50px 70px;
+    background-image: url("/img/review-bg.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 180px;
   }
 }
 
 .reviews__item {
   margin: 0;
   padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 40px;
+  }
 }
 
 .reviews__toggle {
+  display: flex;
+  padding-bottom: 40px;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     right: 50px;
+    bottom: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 70px;
     bottom: 70px;
+  }
+}
+
+.reviews__arrow {
+  width: 50%;
+  height: 50px;
+  background-color: @basic-white;
+  border: 1px solid @border;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    width: 50px;
+    height: 26px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.reviews__arrow--right {
+  background-image: url("/img/reviews-toggle-right.svg");
+}
+
+.reviews__arrow--left {
+  background-image: url("/img/reviews-toggle-left.svg");
+
+  @media (min-width: @tablet-width) {
+    margin-right: 35px;
   }
 }
 
@@ -25,12 +84,28 @@
   font-size: 25px;
   line-height: 30px;
   color: @title;
+  margin: 10px 0 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .reviews__content {
   font-size: 15px;
   line-height: 30px;
   color: @content;
+  margin: 15px 0 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__autor-name {
@@ -38,6 +113,16 @@
   font-size: 17px;
   line-height: 24px;
   color: @title;
+  font-style: normal;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__autor-insta {
@@ -47,9 +132,19 @@
 }
 
 .reviews__button {
+  width: 100%;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 80px;
     right: 50px;
+    width: unset;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 175px;
+    height: 52px;
+    padding: 15px;
+    font-size: 17px;
   }
 }

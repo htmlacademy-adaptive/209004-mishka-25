@@ -9,7 +9,7 @@
   <body class="page__body">
     <header class="page__header page-header">
       <a class="page-header__logo" aria-label="Логотип Мишка"></a>
-      <nav class="page-header__menu-area menu-main visually-hiddens">
+      <nav class="page-header__menu-area page-header__menu-area--nojs menu-main">
         <ul class="menu-main__list">
           <li class="menu-main__item menu-main__item--catalog">
             <a class="menu-main__link" href="catalog.html">
@@ -74,38 +74,66 @@
         <p class="product-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
 
         <dl class="product-week__properties-list">
-          <dt class="product-week__properties-name">Цвет</dt>
+          <dt class="product-week__properties-name">Цвет:</dt>
           <dd class="product-week__properties-value">тиффани/серый</dd>
 
-          <dt class="product-week__properties-name">Диаметр</dt>
+          <dt class="product-week__properties-name">Диаметр:</dt>
           <dd class="product-week__properties-value">25 см</dd>
 
-          <dt class="product-week__properties-name">Высота</dt>
+          <dt class="product-week__properties-name">Высота:</dt>
           <dd class="product-week__properties-value">15 см</dd>
         </dl>
 
-        <img class="product-week__image" src="../img/product-photo-3-mobile.jpg" width="260" height="315" alt="вязанные изделия">
+        <picture class="product-week__image-area">
+          <source srcset="/img/triple-set-tablet.jpg" media="(min-width: 660px)">
+          <source srcset="/img/triple-set-desktop.jpg" media="(min-width: 1200px)">
+          <img class="product-week__image" src="/img/triple-set-mobile.jpg" width="260" height="315" alt="вязанные изделия">
+        </picture>
 
         <p class="product-week__price">
           Цена: 990 руб.
         </p>
 
-        <button class="button product-week__button" type="button">Заказать</button>
+        <button class="product-week__button button" type="button">Заказать</button>
       </section>
 
-      <section class="advantages">
-        <h2 class="advantages__title">Коротко о нас</h2>
+      <section class="advantages decor decor-zigzag">
+        <h2 class="advantages__title">Коротко о нас:</h2>
         <ul class="advantages__list">
-          <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
-          <li class="advantages__item advantages__item--style">Скандинавский стиль по российской цене</li>
-          <li class="advantages__item advantages__item--like">Увеличивает лайки на фотографиях</li>
-          <li class="advantages__item advantages__item--love">Связано вручную с любовью и умилением</li>
-          <li class="advantages__item advantages__item--support">Поддержка отечественного производителя</li>
-          <li class="advantages__item advantages__item--gift">Поставляется в подарочной упаковке</li>
+          <li class="advantages__item advantages__item--eco">
+            Экологически
+            <br>
+            чистые материалы
+          </li>
+          <li class="advantages__item advantages__item--style">
+            Скандинавский стиль
+            <br>
+            по российской цене
+          </li>
+          <li class="advantages__item advantages__item--like">
+            Увеличивает лайки
+            <br>
+            на фотографиях
+          </li>
+          <li class="advantages__item advantages__item--love">
+            Связано вручную
+            <br>
+            с любовью и умилением
+          </li>
+          <li class="advantages__item advantages__item--support">
+            Поддержка отечественного
+            <br>
+            производителя
+          </li>
+          <li class="advantages__item advantages__item--gift">
+            Поставляется
+            <br>
+            в подарочной упаковке
+          </li>
         </ul>
       </section>
 
-      <section class="reviews">
+      <section class="reviews page__main-margin">
         <h2 class="reviews__title">Отзывы</h2>
         <blockquote class="reviews__item">
           <p class="reviews__content">
@@ -131,10 +159,10 @@
         <button class="button reviews__button" type="button">Написать</button>
       </section>
 
-      <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
+      <section class="contacts decor decor-zigzag page__top-margin">
+        <h2 class="contacts__title contacts__wrapper">Контакты</h2>
 
-        <dl class="contacts__list">
+        <dl class="contacts__list contacts__wrapper">
           <dt class="contacts__item-name">e-mail:</dt>
           <dd class="contacts__item-value"><a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
           <dt class="contacts__item-name">адрес:</dt>
@@ -142,10 +170,16 @@
         </dl>
 
         <div class="contacts__map">
-
+          <picture>
+            <source srcset="/img/map-tablet.png" media="(min-width: 660px)">
+            <source srcset="/img/map-desktop.png" media="(min-width: 1200px)">
+            <img class="contacts__map-image" src="/img/map-mobile.png" width="320" height="455" alt="Схма проезда к МимишкаШоп">
+          </picture>
         </div>
 
-        <button class="button button--center contacts__button" type="button">Напишите нам</button>
+        <a class="button button--center contacts__button" href="/feedback/">
+          Напишите нам
+        </a>
       </section>
     </main>
 
@@ -154,23 +188,20 @@
 
       <ul class="social-links">
         <li class="social-links__item social-links__item--vk">
-          <a href="" aria-label="перейти в ВКонтакте">
-            <img src="/img/vk-icon.svg" alt="иконка ВКонтакте" width="27" height="17">
-          </a>
+          <a href="" aria-label="перейти в ВКонтакте"></a>
         </li>
         <li class="social-links__item social-links__item--youtube">
-          <a href="" aria-label="перейти в YouTube">
-            <img src="/img/youtube-icon.svg" alt="иконка youtube" width="24" height="18">
-          </a>
+          <a href="" aria-label="перейти в YouTube"></a>
         </li>
         <li class="social-links__item social-links__item--telegram">
-          <a href="" aria-label="перейти в Telegram">
-            <img src="/img/telegram-icon.svg" alt="иконка Telegram" width="20" height="17">
-          </a>
+          <a href="" aria-label="перейти в Telegram"></a>
         </li>
       </ul>
 
-      <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+      <div class="copyright">
+        <p>Разработано</p>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип ссылка Htmlacademy.Ru"></a>
+      </div>
     </footer>
 
     <template id="addBasketModal">
@@ -193,5 +224,7 @@
         </fieldset>
       </form>
     </template>
+
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

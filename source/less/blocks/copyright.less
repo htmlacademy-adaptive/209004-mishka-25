@@ -4,5 +4,36 @@
   line-height: 18px;
   color: @title;
   text-decoration: none;
-  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: unset;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+.copyright__logo {
+  background-image: url("/img/htmlacademy-logo.svg");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 35px;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+  }
+
+  &:hover {
+    background-image: url("/img/htmlacademy-logo-hover.svg");
+  }
+
+  &:active {
+    background-image: url("/img/htmlacademy-logo-hover.svg");
+    opacity: 0.3;
+  }
 }
