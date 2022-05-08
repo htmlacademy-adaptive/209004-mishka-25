@@ -37,3 +37,30 @@
 @mobile-width: 320px;
 @tablet-width: 660px;
 @desktop-width: 1200px;
+
+/* Decor */
+.decor-zigzag {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("/img/decor-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    height: 6px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @media (min-width: @tablet-width) {
+      background-image: url("/img/decor-zigzag-line-tablet.svg");
+      height: 17px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("/img/decor-zigzag-line-desktop.svg");
+      height: 24px;
+    }
+  }
+}
