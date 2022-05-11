@@ -58,6 +58,14 @@
   @media (min-width: @desktop-width) {
     font-size: 17px;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .menu-main__item--catalog {
@@ -73,6 +81,8 @@
 }
 
 .menu-main__item--search {
+  cursor: pointer;
+
   @media (min-width: @tablet-width) {
     grid-area: search;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
@@ -85,6 +95,15 @@
 
   @media (min-width: @desktop-width) {
     justify-self: center;
+  }
+
+  &:hover::before {
+    background-image: url("/img/search-icon-hover.svg");
+  }
+
+  &:active::before {
+    background-image: url("/img/search-icon-hover.svg");
+    opacity: 0.3;
   }
 
   &::before {
