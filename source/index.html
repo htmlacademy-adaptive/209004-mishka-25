@@ -98,7 +98,7 @@
           Цена: 990 руб.
         </p>
 
-        <button class="product-week__button button" type="button">Заказать</button>
+        <button class="product-week__button button jsModalButton" type="button">Заказать</button>
       </section>
 
       <section class="advantages decor-zigzag">
@@ -207,12 +207,12 @@
     </footer>
 
     <template id="addBasketModal">
-      <form class="form-modal">
-        <fieldset>
-          <legend class="form-modal__title">Добавить в козину</legend>
+      <form class="form-modal visually-hidden">
+        <section class="form-modal__fieldset">
+          <h2 class="form-modal__title">Добавить в корзину</h2>
           <p class="form-modal__description">Выберите размер:</p>
-          <label class="form-modal__check">
-            <input type="radio">s
+          <label class="form-modal__check form-modal__check--checked">
+            <input type="radio" checked>s
           </label>
           <label class="form-modal__check">
             <input type="radio">m
@@ -223,7 +223,7 @@
           <button class="form-modal__button button button--accent" type="button">
             Добавить
           </button>
-        </fieldset>
+        </section>
       </form>
     </template>
 
