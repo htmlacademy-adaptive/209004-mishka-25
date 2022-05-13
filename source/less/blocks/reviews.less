@@ -7,6 +7,11 @@
     background-image: url("/img/review-bg.png");
     background-repeat: no-repeat;
     background-position: left top;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/review-bg@2x.png");
+      background-size: 350px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
