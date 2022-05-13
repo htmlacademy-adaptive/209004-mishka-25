@@ -1,6 +1,10 @@
 import './menu.js';
 import {showPopup} from './popup.js';
 
-const nodeModalButton = document.querySelector('.jsModalButton');
+if (document.querySelector('#addBasketModal')) {
+  const arrModalButtons = document.querySelectorAll('.jsModalButton');
 
-nodeModalButton.addEventListener('click', () => showPopup('order'));
+  for (let nodeModalButton of arrModalButtons) {
+    nodeModalButton.addEventListener('click', () => showPopup('order'));
+  }
+}

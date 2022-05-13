@@ -7,6 +7,11 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 2fr 44px 1fr 21px;
   }
 }
 
@@ -17,10 +22,35 @@
   color: @title;
   padding: @process__wrapper;
   padding-bottom: 26px;
+  padding-left: 90px;
   margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
 
   @media (min-width: @desktop-width) {
-    grid-column: 2/3;
+    grid-column: 3/4;
+    padding-top: 40px;
+    font-size: 20px;
+    line-height: 24px;
+    display: block;
+    padding-left: 34px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 35px;
+    width: 32px;
+    height: 22px;
+    background-image: url("/img/icon-video.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @desktop-width) {
+      position: unset;
+      display: block;
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -28,21 +58,62 @@
   font-size: 13px;
   line-height: 24px;
   color: @content;
+  margin: 0 0 40px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
 .process__wrapper {
   padding: @process__wrapper;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3/4;
+  }
 }
 
-.process__image-area {
+.process__video-area {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+
   @media (min-width: @tablet-width) {
     grid-row: 1/2;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 
   @media (min-width: @desktop-width) {
     grid-row: 1/4;
     margin: 0;
+  }
+}
+
+.process__video-container {
+  width: 100%;
+}
+
+.process__video-button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  width: 101px;
+  height: 77px;
+  display: block;
+
+  & svg {
+    &:hover {
+      width: 120%;
+      height: 120%;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -56,4 +127,5 @@
 .process__button {
   padding: 16px;
   line-height: 16px;
+  width: 100%;
 }

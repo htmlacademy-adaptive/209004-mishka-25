@@ -2,7 +2,7 @@ const HIDE_CLASS = 'visually-hidden';
 const ORDER_FORM_POPUP_AREA = 'form-modal';
 
 const createPopupElements = () => {
-  if (!document.querySelector('.form-modal')) {
+  if (!document.querySelector('.form-modal') && document.querySelector('#addBasketModal')) {
     const templateBasketNode = document.querySelector('#addBasketModal').content.cloneNode(true);
     document.body.appendChild(templateBasketNode);
     const addBasketModalNode = document.querySelector('.form-modal');
