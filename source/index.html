@@ -98,7 +98,7 @@
           Цена: 990 руб.
         </p>
 
-        <button class="product-week__button button jsModalButton" type="button">Заказать</button>
+        <button class="product-week__button button" id="jsModalButton" type="button">Заказать</button>
       </section>
 
       <section class="advantages decor-zigzag">
@@ -190,13 +190,13 @@
 
       <ul class="social-links">
         <li class="social-links__item social-links__item--vk">
-          <a href="" aria-label="перейти в ВКонтакте"></a>
+          <a href="https://vk.com/htmlacademy" aria-label="перейти в ВКонтакте"></a>
         </li>
         <li class="social-links__item social-links__item--youtube">
-          <a href="" aria-label="перейти в YouTube"></a>
+          <a href="https://www.youtube.com/user/htmlacademyru" aria-label="перейти в YouTube"></a>
         </li>
         <li class="social-links__item social-links__item--telegram">
-          <a href="" aria-label="перейти в Telegram"></a>
+          <a href="tg://resolve?domain=htmlacademy" aria-label="перейти в Telegram"></a>
         </li>
       </ul>
 
@@ -207,18 +207,18 @@
     </footer>
 
     <template id="addBasketModal">
-      <form class="form-modal visually-hidden">
+      <form class="page__modal-area form-modal visually-hidden">
         <section class="form-modal__fieldset">
           <h2 class="form-modal__title">Добавить в корзину</h2>
           <p class="form-modal__description">Выберите размер:</p>
           <label class="form-modal__check form-modal__check--checked">
-            <input type="radio" checked>s
+            <input class="visually-hidden" type="radio" checked>s
           </label>
           <label class="form-modal__check">
-            <input type="radio">m
+            <input class="visually-hidden" type="radio">m
           </label>
           <label class="form-modal__check">
-            <input type="radio">l
+            <input class="visually-hidden" type="radio">l
           </label>
           <button class="form-modal__button button button--accent" type="button">
             Добавить
