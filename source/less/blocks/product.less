@@ -6,17 +6,22 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr min-content;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
+    width: calc(95% / 3);
   }
-}
 
-.product__image-area {
-  @media (min-width: @tablet-width) {
-    grid-row: 1/4;
+  &:hover {
+    box-shadow: 0 6px 10px #e5e5e5;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px #e5e5e5;
   }
 }
 
@@ -28,13 +33,13 @@
   object-fit: cover;
 
   @media (min-width: @tablet-width) {
-    width: 334px;
+    min-width: 334px;
     height: 334px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 316px;
-    height: 462px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -45,9 +50,34 @@
   color: @title;
   padding: @product-wrapper;
   margin: 0;
+  padding-top: 30px;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.product__link {
+  text-decoration: none;
+}
+
+.product__link--image {
+  @media (min-width: @tablet-width) {
+    grid-row: 1/4;
+  }
+}
+
+.product__link--title {
   @media (min-width: @tablet-width) {
     grid-column: 2/3;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 260px;
   }
 }
 
@@ -55,7 +85,33 @@
   font-size: 13px;
   line-height: 30px;
   color: @content;
-  padding: @product-wrapper;
+  margin: 15px 30px 0 30px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid @border;
+}
+
+.product__properties-name {
+  margin: 0;
+
+  &::after {
+    content: "\00a0";
+  }
+}
+
+.product__properties-value {
+  margin: 0;
+
+  &::after {
+    content: ",\00a0";
+  }
+
+  &:last-child {
+    &::after {
+      content: "";
+    }
+  }
 }
 
 .product__price {
@@ -64,4 +120,22 @@
   line-height: 24px;
   color: @title;
   padding: @product-wrapper;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__button-add {
+  border: none;
+  background-color: @basic-white;
+
+  & .product__icon-add {
+    &:hover {
+      opacity: 1;
+      fill: @light-green;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }

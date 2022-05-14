@@ -6,12 +6,13 @@
   color: @title;
   text-align: center;
   margin: 0;
-  padding: 50px 30px;
+  padding: 78px 30px 70px;
 
   @media (min-width: @tablet-width) {
-    padding: 100px 30px 75px;
+    padding: 100px 0 75px;
     font-size: 43px;
     line-height: 50px;
+    position: relative;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,19 +23,30 @@
 }
 
 .page-main__topic--image {
+  padding: 50px 30px;
   width: 100%;
   height: 280px;
   box-sizing: border-box;
-  background-image: url("../img/page-main__topic.jpg");
+  background-image: url("/img/page-main__topic.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/page-main__topic@2x.jpg");
+    background-size: 320px auto;
+  }
+
   @media (min-width: @tablet-width) {
-    background-image: url("../img/page-main__topic--tablet.jpg");
+    background-image: url("/img/page-main__topic--tablet.jpg");
     height: 630px;
     padding: 100px 50px;
     font-size: 43px;
     line-height: 50px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/page-main__topic--tablet@2x.jpg");
+      background-size: 768px auto;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -47,4 +59,13 @@
   line-height: 24px;
   color: @content;
   padding: 17px 30px 0;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 50px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 23%;
+  }
 }
