@@ -20,8 +20,10 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
@@ -38,7 +40,8 @@ export const copyfiles = (done) => {
       "source/fonts/*.{woff,woff2}",
       "source/*.ico",
       "source/manifest.webmanifest",
-      "source/*.html"
+      "source/*.html",
+      "source/js/*.js",
     ],
     {
       base: "source"
@@ -65,14 +68,16 @@ export const minifySvg = () => {
 }
 
 // minify Styles
-const minifyStyles = () => {
-  return gulp.src('source/css/*.css', { sourcemaps: true })
-  .pipe(postcss([
-    autoprefixer(),
-    csso()
-  ]))
-  .pipe(rename('style.min.css'))
-  .pipe(gulp.dest(BUILD_FOLDER+'/css/', { sourcemaps: '.' }));
+const productStyles = () => {
+  return gulp.src('source/less/style.less', { sourcemaps: true })
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer(),
+      csso()
+    ]))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest(BUILD_FOLDER+'/css', { sourcemaps: '.' }));
 }
 
 // images optimization
@@ -105,6 +110,18 @@ const server = (done) => {
   done();
 }
 
+const productServer = (done) => {
+  browser.init({
+    server: {
+      baseDir: BUILD_FOLDER
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
@@ -115,10 +132,10 @@ const watcher = () => {
 export const production = gulp.series(
   delfolder,
   copyfiles,
+  productStyles,
   gulp.parallel(
     sprite,
     minifySvg,
-    minifyStyles,
     imagesOptimization,
     webp
   )
@@ -126,7 +143,11 @@ export const production = gulp.series(
 
 export const start = gulp.series(
   production,
-  server
+  productServer
+);
+
+export const devStart = gulp.series(
+  styles, server, watcher
 );
 
 export default gulp.series(
