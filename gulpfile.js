@@ -10,6 +10,8 @@ import rename from 'gulp-rename';
 import del from 'del';
 import csso from 'postcss-csso';
 import squoosh from 'gulp-libsquoosh';
+import htmlmin from "gulp-htmlmin";
+import terser from "gulp-terser";
 
 const BUILD_FOLDER = 'build';
 
@@ -40,8 +42,6 @@ export const copyfiles = (done) => {
       "source/fonts/*.{woff,woff2}",
       "source/*.ico",
       "source/manifest.webmanifest",
-      "source/*.html",
-      "source/js/*.js",
     ],
     {
       base: "source"
@@ -96,6 +96,20 @@ export const webp = () => {
   .pipe(gulp.dest(BUILD_FOLDER+'/img/'));
 }
 
+// html minify
+const htmlMin = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(BUILD_FOLDER))
+}
+
+// js minify
+const jsMin = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest(BUILD_FOLDER+'/js/'))
+}
+
 // Server
 
 const server = (done) => {
@@ -137,7 +151,9 @@ export const production = gulp.series(
     sprite,
     minifySvg,
     imagesOptimization,
-    webp
+    webp,
+    jsMin,
+    htmlMin
   )
 );
 
