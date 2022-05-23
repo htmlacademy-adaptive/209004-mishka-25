@@ -1,15 +1,16 @@
 .advantages {
   padding: 30px;
+  padding-top: 36px;
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding-top: 65px;
-    padding-bottom: 75px;
+    padding-top: 74px;
+    padding-left: 50px;
+    padding-bottom: 58px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 75px;
-    padding-left: 230px;
+    padding: 91px 30px 70px 225px;
   }
 }
 
@@ -40,11 +41,11 @@
 
   @media (min-width: @tablet-width) {
     column-count: 2;
+    padding-right: 35px;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 345px auto;
+    padding-right: 215px;
   }
 }
 
@@ -58,10 +59,13 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 22px;
+    margin-bottom: 23px;
+    padding-top: 31px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 55px;
+    padding-top: 40px;
+    margin-bottom: 15px;
   }
 
   &::before {
@@ -70,13 +74,18 @@
     width: 55px;
     height: 38px;
     display: block;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 18px;
+    }
   }
 }
 
 .advantages__item--eco {
   &::before {
     background-image: url("/img/icon-advantages-eco.svg");
+    background-position: 8px -2px;
   }
 }
 
@@ -89,23 +98,35 @@
 .advantages__item--like {
   &::before {
     background-image: url("/img/icon-advantages-like.svg");
+    background-position: 7px 5px;
   }
 }
 
 .advantages__item--love {
   &::before {
     background-image: url("/img/icon-advantages-love.svg");
+    background-position: 3px 2px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 2px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 0;
+    }
   }
 }
 
 .advantages__item--support {
   &::before {
     background-image: url("/img/icon-advantages-support.svg");
+    background-position: -6px 2px;
   }
 }
 
 .advantages__item--gift {
   &::before {
     background-image: url("/img/icon-advantages-gift.svg");
+    background-position: 3px 2px;
   }
 }

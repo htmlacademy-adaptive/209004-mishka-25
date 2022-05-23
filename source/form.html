@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Форма Заказа - HTML Academy: Мишка</title>
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
@@ -57,15 +58,15 @@
       </button>
     </header>
 
-    <main class="page-main">
+    <main class="page-main decor">
       <h1 class="page-main__topic decor-wave">Вязание на заказ</h1>
       <p class="page-main__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <section>
         <h2 class="visually-hidden">Форма заказа</h2>
         <form class="form" method="POST" action="https://echo.htmlacademy.ru">
           <fieldset class="form__partition">
-            <legend class="form__title-partition">Тип</legend>
-            <ul class="form__list-options form__list-options--column">
+            <legend class="form__title-partition form__title-partition--type">Тип</legend>
+            <ul class="form__list-options form__list-options--column form__list-options--type">
               <li>
                 <input class="form__radio" type="radio" name="type" id="interior" checked>
                 <label class="form__label form__label--radio" for="interior">
@@ -80,9 +81,9 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__partition form__partition--even">
-            <legend class="form__title-partition">Цвет</legend>
-            <ul class="form__list-options">
+          <fieldset class="form__partition form__partition--even form__partition--color">
+            <legend class="form__title-partition form__title-partition--color">Цвет</legend>
+            <ul class="form__list-options form__list-options--color">
               <li>
                 <input class="form__checkbox" type="checkbox" name="white" id="white" checked>
                 <label class="form__label form__label--checkbox" for="white">
@@ -121,26 +122,29 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__partition form__partition--columns">
-            <legend class="form__title-partition">Фио</legend>
-            <label class="form__label" for="fioName">Имя:</label>
+          <fieldset class="form__partition form__partition--columns form__partition--name">
+            <legend class="form__title-partition form__title-partition--name">Фио</legend>
+            <label class="form__label form__label--name" for="fioName">Имя:</label>
               <input class="form__input form__input--required" type="text" id="fioName" name="name" placeholder="Введите ваше имя*" required>
-            <label class="form__label" for="fioFName">Фамилия:</label>
-              <input class="form__input form__input--required" type="text" id="fioFName" name="fname" placeholder="Укажите фамилию*" required>
-            <label class="form__label" for="fioPatronymic">Отчество:</label>
-              <input class="form__input" type="text" id="fioPatronymic" name="patronymic" placeholder="Отчество, если желаете">
+            <label class="form__label form__label--name" for="fioFName">Фамилия:</label>
+              <input class="form__input form__input--required form__input--line" type="text" id="fioFName" name="fname" placeholder="Укажите фамилию*" required>
+            <label class="form__label form__label--name" for="fioPatronymic">Отчество:</label>
+              <input class="form__input form__input--line" type="text" id="fioPatronymic" name="patronymic" placeholder="Отчество, если желаете">
           </fieldset>
-          <fieldset class="form__partition form__partition--even">
-            <legend class="form__title-partition">Тел</legend>
-            <input class="form__input form__input--required form__input--phone" type="tel" name="tel" placeholder="+7 xxx xxx xx xx*" required>
+          <fieldset class="form__partition form__partition--even form__partition--tel">
+            <legend class="form__title-partition form__title-partition--tel">Тел</legend>
+            <label class="visually-hidden" for="tel">Тел</label>
+            <input class="form__input form__input--required form__input--phone" type="tel" name="tel" id="tel" placeholder="+7 xxx xxx xx xx*" required>
           </fieldset>
-          <fieldset class="form__partition form__partition--even">
-            <legend class="form__title-partition">E-mail</legend>
-            <input class="form__input form__input--required form__input--email" type="email" name="email" placeholder="Ваш Email*" required>
+          <fieldset class="form__partition form__partition--even form__partition--mail">
+            <legend class="form__title-partition form__title-partition--mail">E-mail</legend>
+            <label class="visually-hidden" for="email">Тел</label>
+            <input class="form__input form__input--required form__input--email" type="email" name="email" id="email" placeholder="Ваш Email*" required>
           </fieldset>
           <fieldset class="form__partition">
-            <legend class="form__title-partition">Доп</legend>
-            <textarea class="form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <legend class="form__title-partition form__title-partition--description">Доп</legend>
+            <label class="visually-hidden" for="description">Тел</label>
+            <textarea class="form__textarea" id="description" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
           <fieldset class="form__partition form__partition--footer ">
             <p class="form__footnote">*Поля обязательны для заполнения</p>

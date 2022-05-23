@@ -17,11 +17,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    padding: 50px;
+    padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
     padding-right: 20%;
+    grid-template-columns: 175px auto;
   }
 }
 
@@ -37,7 +38,7 @@
 
 .form__partition--columns {
   @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 166px 73px auto;
 
     & .form__title-partition {
       grid-area: 1/1/4/2;
@@ -50,8 +51,45 @@
 
     & .form__input {
       grid-column: 3/4;
-      padding: 0 0 18px 18px;
+      padding: 0 0 16px 20px;
+      margin-bottom: 40px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 176px 73px auto;
+  }
+}
+
+.form__partition--color {
+  @media (min-width: @tablet-width) {
+    padding: 0 0 20px 0;
+  }
+}
+
+.form__partition--name {
+  @media (min-width: @tablet-width) {
+    padding: 65px 50px 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 175px;
+  }
+}
+
+.form__partition--tel {
+  @media (min-width: @tablet-width) {
+    padding: 58px 50px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 175px;
+  }
+}
+
+.form__partition--mail {
+  @media (min-width: @tablet-width) {
+    padding-bottom: 40px;
   }
 }
 
@@ -60,7 +98,7 @@
   font-size: 17px;
   line-height: 16px;
   color: @accent;
-  padding: 30px 0;
+  padding: 0;
   margin: 0;
   text-transform: uppercase;
   display: flex;
@@ -72,7 +110,11 @@
     grid-column: 1/2;
     padding: 0;
     position: absolute;
-    margin-top: 55px;
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 60px;
   }
 
   &::after {
@@ -84,6 +126,60 @@
     @media (min-width: @tablet-width) {
       display: none;
     }
+  }
+}
+
+.form__title-partition--type {
+  @media (min-width: @tablet-width) {
+    margin-top: 82px;
+  }
+}
+
+.form__title-partition--color {
+  @media (min-width: @tablet-width) {
+    margin-top: 65px;
+    margin-left: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+  }
+}
+
+.form__title-partition--name {
+  padding-top: 10px;
+  padding-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.form__title-partition--tel {
+  padding-top: 25px;
+  padding-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+  }
+}
+
+.form__title-partition--mail {
+  padding-top: 25px;
+  padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 32px;
+  }
+}
+
+.form__title-partition--description {
+  padding-top: 26px;
+  padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 70px;
   }
 }
 
@@ -105,15 +201,43 @@
   }
 }
 
+.form__list-options--type {
+  padding-top: 30px;
+  padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 38px;
+    margin-left: 8px;
+  }
+}
+
+.form__list-options--color {
+  padding-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 56px;
+    padding-left: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 50px;
+  }
+}
+
 .form__label {
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
   color: @title;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     font-size: 19px;
   }
+}
+
+.form__label--name {
+  margin-bottom: 7px;
 }
 
 .form__label--radio {
@@ -126,7 +250,8 @@
   height: 42px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 34px;
+    padding-left: 12px;
   }
 
   &:hover {
@@ -147,10 +272,17 @@
     background-position: center center;
     border-radius: 50px;
     border: 2px solid @content;
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     left: -60px;
     position: absolute;
+    box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      width: 50px;
+      height: 50px;
+      left: -65px;
+    }
   }
 }
 
@@ -165,10 +297,11 @@
 .form__input {
   border: none;
   border-bottom: 2px solid @content;
-  padding: 15px 0 10px;
-  margin-bottom: 20px;
+  padding: 12px 0 13px;
+  margin-bottom: 22px;
   font-size: 17px;
   line-height: 18px;
+  font-family: "Open Sans", "Arial", sans-serif;
 
   @media (min-width: @tablet-width) {
     grid-column: 2/3;
@@ -183,6 +316,10 @@
     line-height: 18px;
     color: @title;
     opacity: 0.3;
+
+    @media (min-width: @tablet-width) {
+      font-size: 19px;
+    }
   }
 
   &:hover {
@@ -195,16 +332,23 @@
   }
 }
 
+.form__input--line {
+  @media (min-width: @tablet-width) {
+    margin-left: 50px;
+  }
+}
+
 .form__label--checkbox {
   margin-left: 60px;
-  margin-bottom: 20px;
   position: relative;
   display: flex;
   align-items: center;
   height: 38px;
 
   @media (min-width: @tablet-width) {
-    width: 180px;
+    width: 181px;
+    padding-left: 21px;
+    margin-bottom: 38px;
   }
 
   &:hover {
@@ -226,6 +370,12 @@
     height: 38px;
     left: -60px;
     position: absolute;
+    box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
 
@@ -241,10 +391,22 @@
 
 .form__input--phone {
   text-transform: uppercase;
-  padding-top: 0;
+  padding-top: 10px;
+  padding-bottom: 15px;
   background-image: url("/img/icon-phone.svg");
   background-repeat: no-repeat;
   background-position-x: right;
+  background-position: right 6px top 4px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 17px;
+    padding-top: 8px;
+    background-position: right 27px top 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: right 7px top 4px;
+  }
 
   &:hover {
     background-image: url("/img/icon-phone-active.svg");
@@ -260,6 +422,15 @@
   background-image: url("/img/icon-mail.svg");
   background-repeat: no-repeat;
   background-position-x: right;
+
+  @media (min-width: @tablet-width) {
+    padding: 30px 0 17px 18px;
+    background-position: right 20px top 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: right 0 top 31px;
+  }
 
   &:hover {
     background-image: url("/img/icon-mail-active.svg");
@@ -281,6 +452,7 @@
 
   @media (min-width: @tablet-width) {
     grid-column: 2/3;
+    margin-top: 50px;
   }
 
   &::placeholder {
@@ -288,6 +460,10 @@
     line-height: 18px;
     color: @title;
     opacity: 0.3;
+
+    @media (min-width: @tablet-width) {
+      font-size: 19px;
+    }
   }
 
   &:hover {
@@ -306,11 +482,13 @@
   font-size: 14px;
   line-height: 16px;
   color: @content;
-  padding: 17px 0 30px;
+  padding: 4px 0 16px;
 
   @media (min-width: @tablet-width) {
     order: 2;
     padding: 0;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -324,21 +502,25 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 0;
+    align-items: center;
+    padding-top: 48px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    padding-top: 44px;
+    padding-left: 225px;
   }
 }
 
 .form__button {
   padding: 16px;
+  font-size: 17px;
+  line-height: 16px;
 
   @media (min-width: @tablet-width) {
     width: 230px;
-    height: 50px;
+    height: 52px;
     font-size: 17px;
     line-height: 16px;
   }
