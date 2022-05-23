@@ -6,30 +6,30 @@
   color: @title;
   text-align: center;
   margin: 0;
-  padding: 78px 30px 70px;
+  padding: 70px 30px;
 
   @media (min-width: @tablet-width) {
-    padding: 100px 0 75px;
+    padding: 100px 0 85px;
     font-size: 43px;
     line-height: 50px;
     position: relative;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 102px 30px 95px;
+    padding: 102px 30px 100px;
     font-size: 53px;
     line-height: 57px;
   }
 }
 
 .page-main__topic--image {
-  padding: 50px 30px;
+  padding: 70px 30px 50px;
   width: 100%;
   height: 280px;
   box-sizing: border-box;
   background-image: url("/img/page-main__topic.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center -20px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("/img/page-main__topic@2x.jpg");
@@ -38,10 +38,11 @@
 
   @media (min-width: @tablet-width) {
     background-image: url("/img/page-main__topic--tablet.jpg");
-    height: 630px;
-    padding: 100px 50px;
+    height: 625px;
+    padding: 154px 50px;
     font-size: 43px;
     line-height: 50px;
+    background-position-y: 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("/img/page-main__topic--tablet@2x.jpg");
@@ -50,7 +51,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 110px;
+    padding-top: 160px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -58,14 +61,21 @@
   font-size: 13px;
   line-height: 24px;
   color: @content;
-  padding: 17px 30px 0;
+  padding: 20px 30px 0;
   box-sizing: border-box;
+  margin: 0 0 30px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 15px 50px 0;
+    padding: 55px 50px 0;
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 23%;
+    margin-left: 225px;
+    padding-top: 110px;
+    width: 750px;
+    padding-left: 0;
   }
 }

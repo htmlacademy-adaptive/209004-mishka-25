@@ -1,17 +1,18 @@
 @process__wrapper: 0 34px;
 
 .process {
-  padding: 20px 0 33px;
+  padding: 20px 0 62px;
   border: 1px solid @border;
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     display: grid;
     padding-top: 0;
+    padding-bottom: 44px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 2fr 44px 1fr 21px;
+    grid-template-columns: 683px 44px 1fr 21px;
     padding-bottom: 0;
   }
 }
@@ -29,9 +30,15 @@
   display: flex;
   align-items: center;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    padding-left: 106px;
+    padding-bottom: 10px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column: 3/4;
-    padding-top: 40px;
+    padding-top: 48px;
     font-size: 20px;
     line-height: 24px;
     display: block;
@@ -47,6 +54,10 @@
     background-image: url("/img/icon-video.svg");
     background-repeat: no-repeat;
 
+    @media (min-width: @tablet-width) {
+      left: 40px;
+    }
+
     @media (min-width: @desktop-width) {
       position: unset;
       display: block;
@@ -59,19 +70,31 @@
   font-size: 13px;
   line-height: 24px;
   color: @content;
-  margin: 0 0 40px;
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    line-height: 30px;
+    font-size: 15px;
+    padding-bottom: 24px;
+  }
 
   @media (min-width: @desktop-width) {
     font-size: 15px;
     line-height: 30px;
+    padding-bottom: 32px;
   }
 }
 
 .process__wrapper {
   padding: @process__wrapper;
 
+  @media (min-width: @tablet-width) {
+    padding: 0 41px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column: 3/4;
+    padding: 0 34px;
   }
 }
 
@@ -81,11 +104,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
     grid-row: 1/2;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -96,6 +119,11 @@
 
 .process__video-container {
   width: 100%;
+  height: 154px;
+
+  @media (min-width: @tablet-width) {
+    height: auto;
+  }
 }
 
 .process__video-button {

@@ -1,8 +1,8 @@
 .contacts {
-  padding: 38px 0 40px;
+  padding: 43px 0 40px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 95px;
+    padding-top: 86px;
     padding-bottom: 57px;
   }
 
@@ -14,6 +14,7 @@
       "button map";
     grid-template-columns: 350px auto;
     padding: 95px 50px 105px 225px;
+    grid-template-rows: 170px;
   }
 }
 
@@ -32,7 +33,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 85px;
+    margin-top: 78px;
+    font-size: 53px;
+    line-height: 57px;
   }
 
   &::before {
@@ -43,8 +46,8 @@
       background-repeat: no-repeat;
       width: 47px;
       height: 81px;
-      right: 50px;
-      top: -32px;
+      right: 53px;
+      top: -23px;
     }
 
     @media (min-width: @desktop-width) {
@@ -59,48 +62,54 @@
   font-size: 14px;
   line-height: 30px;
   color: @content;
-  margin: 30px 0 24px;
+  margin: 30px 0 34px;
   display: grid;
-  grid-template-columns: 75px auto;
+  grid-template-columns: 77px auto;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 75px 255px 75px auto;
+    grid-template-columns: 75px 258px 75px auto;
     font-size: 17px;
     margin-bottom: 17px;
+    margin-top: 48px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 75px auto;
+    grid-template-rows: 60px auto;
     grid-area: address;
+    margin: 0;
   }
 }
 
 .contacts__item-value {
-  margin: 0 0 38px;
+  margin: 0 0 28px 3px;
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 30px;
+    margin: 0;
   }
 }
 
 .contacts__link {
   color: @content;
-  text-decoration: underline;
-  text-decoration-color: @link-underline;
+  text-decoration-color: #62d1ba;
 
   &:hover {
     color: #46c1ae;
-    text-decoration-color: #46c1ae;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    border-bottom: 1px solid #46c1ae;
+    padding-bottom: 3px;
   }
 
   &:active {
     color: #46c1ae;
-    text-decoration-color: fade(@link-underline, 10);
+    border-bottom: 1px solid fade(@link-underline, 10);
   }
 }
 
 .contacts__map {
-  padding-bottom: 40px;
+  padding-bottom: 36px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 55px;
@@ -163,11 +172,12 @@
   text-decoration: none;
   margin-left: 30px;
   margin-right: 30px;
-  padding: 16px;
+  padding: 16px 16px 12px;
 
   @media (min-width: @tablet-width) {
-    width: 320px;
+    width: 230px;
     margin: auto;
+    font-size: 17px;
   }
 
   @media (min-width: @desktop-width) {
@@ -184,8 +194,7 @@
   padding-right: 30px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px;
   }
 
   @media (min-width: @desktop-width) {
